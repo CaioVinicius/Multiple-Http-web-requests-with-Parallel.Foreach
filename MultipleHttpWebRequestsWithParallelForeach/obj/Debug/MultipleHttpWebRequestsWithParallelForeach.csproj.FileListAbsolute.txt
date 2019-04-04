@@ -10,3 +10,15 @@ C:\Users\Caio Vinicius\source\repos\MultipleHttpWebRequestsWithParallelForeach\M
 C:\Users\Caio Vinicius\source\repos\MultipleHttpWebRequestsWithParallelForeach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Caio Vinicius\source\repos\MultipleHttpWebRequestsWithParallelForeach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Caio Vinicius\source\repos\MultipleHttpWebRequestsWithParallelForeach\MultipleHttpWebRequestsWithParallelForeach\obj\Debug\MultipleHttpWebRequestsWithParallelForeach.csproj.CopyComplete
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\Ceps.txt
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\MultipleHttpWebRequestsWithParallelForeach.exe.config
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\MultipleHttpWebRequestsWithParallelForeach.exe
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\MultipleHttpWebRequestsWithParallelForeach.pdb
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\Newtonsoft.Json.dll
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\Newtonsoft.Json.pdb
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\bin\Debug\Newtonsoft.Json.xml
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\obj\Debug\MultipleHttpWebRequestsWithParallelForeach.csprojAssemblyReference.cache
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\obj\Debug\MultipleHttpWebRequestsWithParallelForeach.csproj.CoreCompileInputs.cache
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\obj\Debug\MultipleHttpWebRequestsWithParallelForeach.csproj.CopyComplete
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\obj\Debug\MultipleHttpWebRequestsWithParallelForeach.exe
+E:\Repositories\Multiple-Http-web-requests-with-Parallel.Foreach\MultipleHttpWebRequestsWithParallelForeach\obj\Debug\MultipleHttpWebRequestsWithParallelForeach.pdb

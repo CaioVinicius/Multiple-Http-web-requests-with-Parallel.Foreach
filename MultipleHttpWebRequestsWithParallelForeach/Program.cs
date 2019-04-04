@@ -25,29 +25,31 @@ namespace MultipleHttpWebRequestsWithParallelForeach
 
             stopWatch.Start();
 
-            Parallel.ForEach(cepsList, (cep) =>
-            {
-                var Url = $"https://viacep.com.br/ws/{cep}/json/";
+            Parallel.ForEach(cepsList, new ParallelOptions { MaxDegreeOfParallelism = 1 }, (cep) =>
+             {
+                 var Url = $"https://viacep.com.br/ws/{cep}/json/";
 
-                try // importante colocar um tratamento de exceção para não quebrar toda a iteração caso hava algum erro/exceção
-                {
-                    string streamResponseAsJson = GetJsonResponseFromWebService(Url);
+                 try // importante colocar um tratamento de exceção para não quebrar toda a iteração caso hava algum erro/exceção
+                 {
+                     string streamResponseAsJson = GetJsonResponseFromWebService(Url);
 
-                    if (string.IsNullOrEmpty(streamResponseAsJson))
-                        return;
+                     if (string.IsNullOrEmpty(streamResponseAsJson))
+                         return;
 
-                    var address = JsonConvert.DeserializeObject<Address>(streamResponseAsJson);
+                     var address = JsonConvert.DeserializeObject<Address>(streamResponseAsJson);
 
-                    lock (addressList) // equanto a thread atual está incrementando este recuso compartilhado, nenhuma outra thread poderá fazer está operação.
-                    {
-                        addressList.Add(address);
-                    }
-                }
-                catch
-                {
-                    return; // continua a iteração, funciona como o continue do for/ foreach
-                }
-            });
+                     lock (addressList) // equanto a thread atual está incrementando este recuso compartilhado, nenhuma outra thread poderá fazer está operação.
+                     {
+                         addressList.Add(address);
+                     }
+                 }
+                 catch (Exception ex)
+                 {
+                     Console.WriteLine($"Erro on cep - {cep} : {ex.Message}");
+
+                     return; // continua a iteração, funciona como o continue do for/ foreach
+                 }
+             });
 
             stopWatch.Stop();
 
@@ -59,9 +61,12 @@ namespace MultipleHttpWebRequestsWithParallelForeach
 
         private static string GetJsonResponseFromWebService(string Url)
         {
-            string streamResponseAsJson = "";
+            WebProxy proxy = new WebProxy();
+            proxy.Address = new Uri("http://189.39.120.226:3128");
 
             var request = (HttpWebRequest)WebRequest.Create(Url);
+
+            request.Proxy = proxy;
 
             request.ContentType = "application/json; charset=utf-8";
 
@@ -71,10 +76,8 @@ namespace MultipleHttpWebRequestsWithParallelForeach
             {
                 var reader = new StreamReader(responseStream, Encoding.UTF8);
 
-                streamResponseAsJson = reader.ReadToEnd();
+                return reader.ReadToEnd();
             }
-
-            return streamResponseAsJson;
         }
 
         private static List<string> GetCepList()
