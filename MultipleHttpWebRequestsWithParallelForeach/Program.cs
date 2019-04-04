@@ -21,6 +21,9 @@ namespace MultipleHttpWebRequestsWithParallelForeach
 
             var addressList = new List<Address>();
 
+            ServicePointManager.DefaultConnectionLimit = 10;
+            ServicePointManager.Expect100Continue = false;
+
             var stopWatch = new Stopwatch(); //Fornece métodos para medir o tempo.
 
             stopWatch.Start();
@@ -62,7 +65,7 @@ namespace MultipleHttpWebRequestsWithParallelForeach
         private static string GetJsonResponseFromWebService(string Url)
         {
             WebProxy proxy = new WebProxy();
-            proxy.Address = new Uri("http://189.39.120.226:3128");
+            proxy.Address = new Uri("http://45.224.86.78:56075");
 
             var request = (HttpWebRequest)WebRequest.Create(Url);
 
