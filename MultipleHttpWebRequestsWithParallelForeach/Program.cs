@@ -65,7 +65,7 @@ namespace MultipleHttpWebRequestsWithParallelForeach
         private static string GetJsonResponseFromWebService(string Url)
         {
             WebProxy proxy = new WebProxy();
-            proxy.Address = new Uri("http://45.224.86.78:56075");
+            proxy.Address = new Uri("{ip/url}:{port}");
 
             var request = (HttpWebRequest)WebRequest.Create(Url);
 
